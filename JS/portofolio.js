@@ -7,33 +7,35 @@ function goToSection(id) {
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
   }
 }
-var form = document.getElementById("my-form");
+const form = document.getElementById("my-form");
 
 async function handleSubmit(event) {
   event.preventDefault(); 
   const formElement = event.currentTarget;
-  const data = new FormData(formElement);
+  const formData = new FormData(formElement);
+
+  // 1. Manually add the form name to the data
+  formData.append("form-name", formElement.getAttribute("name"));
 
   try {
-    const response = await fetch(formElement.action, {
-      method: "POST", // Explicitly set POST
-      body: data,
-      headers: { 'Accept': 'application/json' }
+    const response = await fetch("/", { // 2. Post to the root or current path
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" }, // 3. Correct header
+      body: new URLSearchParams(formData).toString() // 4. URL-encode the body
     });
 
     if (response.ok) {
+      console.log("Success!");
       formElement.reset();
     } else {
-      const errorData = await response.json();
-      console.error("Formspree Error:", errorData);
+      console.error("Submission failed");
     }
   } catch (error) {
-    // This is where "Failed to fetch" is caught
-    console.error("Network/CORS Error:", error);
+    console.error("Network error:", error);
   }
 }
 
-document.getElementById("myForm").addEventListener("submit", handleSubmit);
+form.addEventListener("submit", handleSubmit);
 const messageArea = document.querySelector('textarea[name="Message"]');
 
 messageArea.addEventListener("keydown", function(event) {
