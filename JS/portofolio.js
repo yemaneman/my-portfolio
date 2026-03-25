@@ -7,7 +7,7 @@ function goToSection(id) {
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
   }
 }
-const form = document.getElementById("my-form");
+const form = document.getElementById("myForm");
 
 async function handleSubmit(event) {
   event.preventDefault(); 
