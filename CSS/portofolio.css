@@ -1,8 +1,120 @@
+/* Responsive for Tablets */
+@media (max-width: 1024px) and (min-width: 481px) {
+  body {
+    font-size: 16px;
+  }
+  nav {
+    padding: 12px 18px;
+  }
+  nav img {
+    width: 50px;
+  }
+  nav h2 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 90px 20px;
+    margin: 15px 0;
+  }
+  #home h1 {
+    font-size: 2.3rem;
+  }
+  #about {
+    gap: 30px;
+    flex-direction: column;
+    text-align: center;
+  }
+  #about img {
+    width: 160px;
+    height: 200px;
+  }
+  #skills #skills-container {
+    flex-direction: row;
+    gap: 15px;
+  }
+  #skills #skills-container div {
+    gap: 15px;
+  }
+  #projects div {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  #projects div div {
+    padding: 15px;
+  }
+  form {
+    max-width: 90%;
+    padding: 0 10px;
+  }
+  footer {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+/* Extra Responsive for Phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  nav {
+    flex-direction: column;
+    padding: 10px 10px;
+    align-items: flex-start;
+  }
+  nav div {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  nav img {
+    width: 45px;
+    margin-bottom: 8px;
+  }
+  nav h2 {
+    font-size: 1.3rem;
+  }
+  section {
+    padding: 80px 10px;
+    margin: 10px 0;
+  }
+  #home h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #about {
+    gap: 20px;
+  }
+  #about img {
+    width: 120px;
+    height: 150px;
+  }
+  #skills #skills-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #skills #skills-container div {
+    gap: 10px;
+  }
+  #projects div {
+    gap: 10px;
+  }
+  #projects div div {
+    padding: 10px;
+  }
+  form {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  footer {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
 }
 
 /*  Body */
@@ -208,7 +320,7 @@ footer a {
 }
 
 /*  Responsive */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
 
   #about {
     flex-direction: column;
