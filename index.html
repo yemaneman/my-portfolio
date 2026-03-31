@@ -1,25 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="CSS/portofolio.css">
-</head>
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yemane Portfolio</title>
+  <link rel="stylesheet" href="CSS/portofolio.css" />
 </head>
 <body>
-
- 
-  <nav>
-    <div>
-       <img src="images/profile.jpg" alt="">
-       <h2>MyPortfolio</h2>
+  <nav class="topnav">
+    <div class="brand">
+      <img src="images/profile.jpg" alt="Yemane profile" />
+      <h1>Yemane</h1>
     </div>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -30,97 +21,131 @@
     </ul>
   </nav>
 
-  
-  <section id="home">
-    <h1>Hello, I'm Yemane </h1>
-    <p>Front-End Developer</p>
-    <button onclick="goToSection('projects')" >View Projects</button>
-    <button onclick="goToSection('contact')">Contact Me</button>
-  </section>
-
-  
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="images/about-image.jpg" alt="My Photo" >
-    <p>
-      I am an IT student passionate about building modern web applications.
-    </p>
-  </section>
-
- 
-  <section id="skills">
-    <h2>My Skills</h2>
-    <div id="skills-container">
-      <div>
-        <p>HTML</p>
-       <img src="images/HTML5_logo_black.svg.png" alt="">
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-card glass">
+        <img class="hero-avatar" src="images/profile.jpg" alt="Yemane" />
+        <h1>Hello, I'm Yemane</h1>
+        <p>Front-End Developer ·Android App Developer · UI/UX Enthusiast · React + CSS Expert</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="goToSection('projects')">View Projects</button>
+          <button class="btn btn-outline" onclick="goToSection('contact')">Contact Me</button>
+        </div>
       </div>
-      <div>
-        <p>CSS</p>
-        <img src="images/w3_css-official.svg" alt="">
-      </div>
-      <div>
-        <p>JavaScript</p>
-        <img src="images/javascript-logo-svgrepo-com.svg" alt="">
-      </div>
-      <div>
-        <p>Python</p>
-        <img src="images/python-3-logo-svgrepo-com.svg" alt="">
-      </div>
-      <div>
-        <p>Git</p>
-        <img src="images/git-icon-logo-svgrepo-com.svg" alt="">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <div>
-      <div>
-        <h3>Project One</h3>
-        <p>A cool web app</p>
-        <button>Live Demo</button>
-        <button>View Code</button>
+    <section id="about" class="section-card">
+      <h2>About Me</h2>
+      <div class="section-grid">
+        <img src="images/about-image.jpg" alt="About Yemane" />
+        <p>
+         I’m a Front-End and Android Developer building high-impact, cross-platform applications. I create pixel-perfect, responsive interfaces with clean, scalable code. My work blends creativity with strong problem-solving to deliver efficient solutions. I’ve built a Pomodoro focus timer—featuring auto-alerts and repeat cycles—alongside a full-featured calculator for both web and mobile. Driven by innovation, I craft modern digital products that solve real-world problems.
+        </p>
       </div>
+    </section>
 
-      <div>
-        <h3>Project Two</h3>
-        <p>E-commerce site</p>
-        <button>Live Demo</button>
-        <button>View Code</button>
+    <section id="skills" class="section-card">
+      <h2>Skills</h2>
+      <div id="skills-container">
+        <div class="skill-item">
+          <img src="images/HTML5_logo_black.svg.png" alt="HTML5" />
+          <span>HTML5</span>
+        </div>
+        <div class="skill-item">
+          <img src="images/w3_css-official.svg" alt="CSS3" />
+          <span>CSS3</span>
+        </div>
+        <div class="skill-item">
+          <img src="images/javascript-logo-svgrepo-com.svg" alt="JavaScript" />
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-item">
+          <img src="images/python-3-logo-svgrepo-com.svg" alt="Python" />
+          <span>Python</span>
+        </div>
+        <div class="skill-item">
+          <img src="images/git-icon-logo-svgrepo-com.svg" alt="Git" />
+          <span>Git</span>
+        </div>
+        <div class="skill-item">
+          <img src="images/android-logo-svgrepo-com.svg" alt="Android" />
+          <span>Android Development</span>
+        </div>
+        <div class="skill-item">
+          <img src="images/logo-react-svgrepo-com.svg" alt="Web" />
+          <span>React</span>
+        </div>
+        <div class="skill-item">
+          <img src="images/web-app-icon.svg" alt="Web" />
+          <span>Web App Development</span>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  
-  <section id="contact">
-    <h2>Contact Me</h2>
+    <section id="projects" class="section-card">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>Calculator App</h3>
+          <p>Cross-platform calculator available as a responsive web app and Android application. Includes memory, percentage, and step-by-step expression support.</p>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://yemaneman.github.io/calculator/">Web Live Demo</a>
+            <a class="btn btn-outline" href="https://github.com/yemaneman/calculator">GitHub (Web)</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>Pomodoro Timer</h3>
+          <p>An Android + web focus timer with adjustable intervals, work/break cycles, and progress tracking for productivity.</p>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://yemaneman.github.io/pomodoro/">Web Live Demo</a>
+            <a class="btn btn-outline" href="https://github.com/yemaneman/PomodoroApp">GitHub (Android)</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>Responsive Portfolio</h3>
+          <p>Modern and animated portfolio UI built with gradient glassmorphism design and smooth scrolling navigation.</p>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://yemaneman.github.io/my-portfolio/">Live Demo</a>
+            <a class="btn btn-outline" href="https://github.com/yemaneman/my-portfolio">View Code</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>E-commerce UI</h3>
+          <p>Interactive product listing, filters, and cart UX demo using JavaScript state updates and responsive design.</p>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="#">Live Demo</a>
+            <a class="btn btn-outline" href="#">View Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <form  id="myForm" data-netlify="true" method="post">
-      <input type="text" name="name" placeholder="Your Name" required><br><br>
-      <input type="email" name="email" placeholder="Your Email" required><br><br>
-      <textarea name="Message" placeholder="Your Message"></textarea><br><br>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <section id="contact" class="section-card">
+      <h2>Contact Me</h2>
+      <form id="myForm" data-netlify="true" method="post" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+  </main>
 
-  
   <footer>
-    <p>© 2026 Yemane</p>
-    <p>Follow me:</p>
-    <a href="#"><img style="width: 20px;"  src="images/facebook-color-svgrepo-com.svg" > Facebook</a>
-    <a href="#"><img style="width: 20px;"  src="images/twitter-4-logo-svgrepo-com.svg" >  Twitter</a>
-    <a href="https://github.com/yemaneman"> <img style="width: 20px;"  src="images/github-logo.png" >GitHub</a>
-    <a href="https://www.tiktok.com/@hurry_up141"><img style="width: 20px;"  src="images/tiktok-icon-black-1-logo-svgrepo-com.svg" >Tiktok</a>
-    <a href="http://www.youtube.com/@YemaneTutorial"><img style="width: 20px;"  src="images/youtube-2-logo-svgrepo-com.svg"> YouTube</a>
-    
+    <div class="footer-content">
+      <p>© 2026 Yemane</p>
+      <div class="social-links">
+        <p>Follow Me:</p>
+        <a href="#"><img src="images/facebook-color-svgrepo-com.svg" alt="Facebook" />Facebook</a>
+        <a href="#"><img src="images/twitter-4-logo-svgrepo-com.svg" alt="Twitter" />Twitter</a>
+        <a href="https://github.com/yemaneman"><img src="images/github-logo.png" alt="GitHub" />GitHub</a>
+        <a href="https://www.tiktok.com/@hurry_up141"><img src="images/tiktok-icon-black-1-logo-svgrepo-com.svg" alt="Tiktok" />Tiktok</a>
+        <a href="http://www.youtube.com/@YemaneTutorial"><img src="images/youtube-2-logo-svgrepo-com.svg" alt="YouTube" />YouTube</a>
+      </div>
+    </div>
   </footer>
-  <script src="JS/portofolio.js">
-  </script>
 
+  <script src="JS/portofolio.js"></script>
 </body>
 </html>
 </body>
